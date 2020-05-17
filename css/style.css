@@ -18,12 +18,12 @@
 }
 
 .btn-primary {
-  background-color: #f2f7fe;
-  color: #333333;
+  background-color: #418bff;
+  color: white;
 }
 
 .btn-secondary {
-  background-color: #ff9f33;
+  background-color: #ff8700;
   color: white;
 }
 
@@ -49,10 +49,8 @@ a {
 }
 
 .showcase {
-  /*   background-color: $primary-color;
-  color: set-text-color($primary-color); */
-  background-color: #c3d8fa;
-  color: #333333;
+  background-color: #0e6cff;
+  color: white;
   height: 600px;
 }
 
@@ -79,12 +77,12 @@ a {
   padding: 15px;
 }
 
-.showcase nav a:hover {
-  color: #ff8700;
+.showcase nav a {
+  color: white;
 }
 
-.showcase a {
-  color: white;
+.showcase nav a:hover {
+  color: #ff8700;
 }
 
 .showcase-content {

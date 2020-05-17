@@ -23,11 +23,12 @@ a {
 }
 
 .showcase {
-//background-color: $primary-color;
-//color: set-text-color($primary-color); */ // this line calls the function set-text.. with argument $primary-color
+  background-color: $primary-color;
+  color: set-text-color($primary-color);
+  //this last line calls the function set-text.. with argument $primary-color
   
   //this next line does the same that the above two lines but making use of a mixin
-  @include set-background($primary-color); 
+  //@include set-background($primary-color); 
   height: 600px;
 
   nav {
