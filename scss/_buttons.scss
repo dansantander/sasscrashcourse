@@ -1,0 +1,22 @@
+%btn { //shared class
+  display: inline-block;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin: 3px;
+
+  &:hover {
+    transform: scale(.98);
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+  //background-color: lighten($primary-color, 10%); //makes the primary button 10% lighter than the primary color
+  @include set-background(lighten($primary-color, 10%)); //the same that the above line but using the mixing to match it according to the background color
+}
+
+.btn-secondary {
+  @extend %btn;
+  //background-color: $secondary-color;
+  @include set-background(lighten($secondary-color));
+}

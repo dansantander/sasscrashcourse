@@ -1,8 +1,6 @@
-$font-stack:  Arial, Helvetica, sans-serif;
-$light-color: f4f4f4;
-$primary-color: #0e6cff;
-$secondary-color: #ff8700;
-
+@import 'config';
+@import 'utilities';
+@import 'buttons';
 
 * {
   box-sizing: border-box;
@@ -25,8 +23,11 @@ a {
 }
 
 .showcase {
-  background-color: $primary-color;
-  color: white;
+//background-color: $primary-color;
+//color: set-text-color($primary-color); */ // this line calls the function set-text.. with argument $primary-color
+  
+  //this next line does the same that the above two lines but making use of a mixin
+  @include set-background($primary-color); 
   height: 600px;
 
   nav {
@@ -43,21 +44,36 @@ a {
       padding: 15px;
     }
 
+    a {
+      color: set-text-color($primary-color);
+    }
+
     a:hover {
       color: $secondary-color;
     }
 
   }
 
-  a {
-    color: white;
+  &-content { //this line means ".showcase-content"
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 50%;
+    }
+
+    h1 {
+      font-size: 50px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 20px 0;
+    }
+
   }
 
 }
 
-.container {
-  max-width: 1100px;
-  padding: 0 30px;
-  margin: 0 auto;
-  overflow: auto;
-}
