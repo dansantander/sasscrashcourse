@@ -23,12 +23,12 @@ a {
 }
 
 .showcase {
-  background-color: $primary-color;
-  color: set-text-color($primary-color);
+  //background-color: $primary-color;
+  //color: set-text-color($primary-color);
   //this last line calls the function set-text.. with argument $primary-color
   
   //this next line does the same that the above two lines but making use of a mixin
-  //@include set-background($primary-color); 
+  @include set-background($primary-color); 
   height: 600px;
 
   nav {
@@ -60,6 +60,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
 
     img {
       width: 50%;
@@ -69,12 +70,16 @@ a {
       font-size: 50px;
       line-height: 1.2;
     }
-
+/* 
     p {
       margin: 20px 0;
     }
+    this block was originally creating space arround the p tag with class my-1,
+    but then we made the spaceamounts and the each loop to create spacings according
+    to the name of the class. */
 
   }
 
 }
 
+@import 'mobile';
